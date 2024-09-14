@@ -1,0 +1,12 @@
+name = "cyberpunk-reverse-proxy"
+main = "src/worker.js"
+compatibility_date = "2024-01-22"
+workers_dev = true
+
+[[routes]]
+pattern = "*atlasforge.gg/cyberpunk/"
+zone_name = "atlasforge.gg"
+
+[[routes]]
+pattern = "*atlasforge.gg/cyberpunk*"
+zone_name = "atlasforge.gg"
