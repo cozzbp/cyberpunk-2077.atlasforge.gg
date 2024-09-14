@@ -26,7 +26,7 @@ class AttributeRewriter {
 const rules = [
   {
     from: 'atlasforge.gg/cyberpunk',
-    to: 'cyberpunk.atlasforge.gg'
+    to: 'cyberpunk-2077.atlasforge.gg'
   },
   // more rules here
 ]
@@ -35,7 +35,7 @@ const handleRequest = async req => {
   // Redirect WordPress login to the subdomain
   let baseUrl = req.url;
   if (baseUrl.includes('atlasforge.gg/cyberpunk/wp-login.php')) {
-    return new Response('', { status: 302, headers: { 'Location': baseUrl.replace('atlasforge.gg/cyberpunk', 'cyberpunk.atlasforge.gg') } });
+    return new Response('', { status: 302, headers: { 'Location': baseUrl.replace('atlasforge.gg/cyberpunk', 'cyberpunk-2077.atlasforge.gg') } });
   }
 
   const url = new URL(req.url);

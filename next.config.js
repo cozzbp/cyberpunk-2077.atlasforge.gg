@@ -2,7 +2,7 @@
 const IS_DEV = process.env.NODE_ENV === 'development'
 const nextConfig = {
   //output: 'export',
-  assetPrefix: IS_DEV ? undefined : 'https://cyberpunk.atlasforge.gg',
+  assetPrefix: IS_DEV ? undefined : 'https://cyberpunk-2077.atlasforge.gg',
   skipTrailingSlashRedirect: true,
   experimental: {
     externalDir: true,
