@@ -1,0 +1,33 @@
+.container {
+  padding: 10px;
+  position: relative;
+	background: #a73a3f;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% calc(100% - 10px), calc(0% + 2px) calc(100% - 15px), calc(0% + 2px) calc(100% - 25px), 0% calc(100% - 30px));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #131121;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 13px), calc(100% - 13px) 100%, 0% 100%, 0% calc(100% - 8px), calc(0% + 2px) calc(100% - 13px), calc(0% + 2px) calc(100% - 23px), 0% calc(100% - 28px));
+  z-index: -1;
+}
+
+.label {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #53d9e2;
+}

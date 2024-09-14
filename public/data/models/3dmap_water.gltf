@@ -1,0 +1,127 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v3.6.27",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "3dmap_water"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "submesh_00_LOD_1.307",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 1,
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TEXCOORD_0": 4,
+            "TEXCOORD_1": 5
+          },
+          "indices": 0,
+          "mode": 4,
+          "material": 0,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "COLOR_0": 0,
+                "POSITION": 1,
+                "NORMAL": 2,
+                "TEXCOORD_0": 3,
+                "TEXCOORD_1": 4
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "count": 384,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5123,
+      "count": 95,
+      "normalized": true,
+      "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 95,
+      "max": [
+        7447.004869216002,
+        6.541490309752076,
+        5966.77485749916
+      ],
+      "min": [
+        -8005.508775466002,
+        -8.541490309752076,
+        -7336.414048903502
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 95,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 95,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 95,
+      "type": "VEC2"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 653
+    }
+  ],
+  "buffers": [
+    {
+      "name": "3dmap_water",
+      "byteLength": 656,
+      "uri": "data:application/octet-stream;base64,RFJBQ08CAgEBAAAAX4ABBIABEQVBQQlJGUkITQ1HFCrvur5Pa926fv/SVp+qVp+yNku/qKVfqqpPdak+Vd3adU3XVLVVVU+prgn/ARH/Av9N/wL/Tf8C/03/Av9NBQAAAP8AAAEAAAIAAAMAAAECBAQAAAEBAAkDAAECAQEJAwACAwEDCQIAAwIBAwkCAAQCAQEBAA8DVT8vrAPWL7sBAAAQLwIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANZIAAAEBAQAMA2kHrAO5BLkEvQbFCCUOZQWsyQom6WJMKQ3SeXLALo2gCBqomiMECH7zL//gTzG11QM6Dp7B+bS87YjQBQCEpQA6o4BCAwDQTJ8ABIwBtKYAgKVQAMBAG1ACIHGDEAD2A5ROAO8eAIAZYAcLuFIA6QIXAKDcKwAIAAAAAMcEAMAEYEAXAEHAcwEAAwAA6AIFvhMA8ABq7wAATAFAigZwAED8A+wTAM0COgCAHABIDIDFAaxYAdi6BaglNQDYAwAQ7gAADgLAagAgC9AQAIkAsI4ARJIAgBYAkBrgRQJgAAAEDwCOEQDwdQyACuQGoGHDAEgAABUAUIIGAIN0AQCWCZMDYACaBsA5MIBagGwDTiPAMYCcCwDABfKgowFMmwCSO0BFPgCQBQDSAAAVAdhYWAAAAAD/BwAAve/5xQAAgL/7BuXFuTVxRgsGAwEBAQEBQAEA/wAAAH8AAAD/Am9HCAUBAQEBAQFAAQAAAAAAAQEAAAAAAAAAAAAAAAAAAACAPwAAgD8KBQEBAQEBAUABAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAACAPwoAAAA="
+    }
+  ],
+  "materials": [
+    {
+      "name": "default",
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

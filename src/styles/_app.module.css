@@ -1,0 +1,83 @@
+.main {
+  font-family: var(--font);
+  height: 100%;
+  position: relative;
+}
+
+.watermark {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.footer {
+  background-color: rgba(26, 27, 31, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.footerInner {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 80px;
+  align-self: center;
+  font-family: 'Play';
+  max-width: 875px;
+  margin-bottom: 80px;
+}
+
+.copyrightSection {
+  flex-grow: 1;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 5px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.StyledCopyright {
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.storeButtons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.playStore img {
+  width: 150px;
+}
+
+.appStore img {
+  width: 150px;
+}
+
+.tooltipContainer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 50;
+}

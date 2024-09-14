@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Play';
+  src: url('/fonts/Play-Regular.ttf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Play';
+
+  overflow-y: scroll;
+  height: 100%;
+  min-height: calc(800px);
+}
+.main :global(.maplibregl-map) {
+  font-family: 'Play';
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerImg {
+  width: 350px;
+}
+
+.mapPreview {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.mapPreview img {
+  object-fit: cover;
+}
+
+.mapPreview {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.mapPreview a {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapPreview div{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #131121;
+  padding: 10px;
+
+  transition: filter 200ms;
+  text-align: center;
+}
+
+.mapPreview:hover{
+  filter: contrast(1) brightness(1.2) saturate(1);
+}
+
+.mapPreview img{
+  width: 200px;
+  height: 200px;
+}

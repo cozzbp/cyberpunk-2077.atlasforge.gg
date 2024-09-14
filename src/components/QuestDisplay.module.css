@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  min-width: 300px;
+  width: 100%;
+  padding: 5px;
+  max-height: 200px;
+  overflow-y: scroll;
+
+  white-space: pre-wrap;
+}
+
+.title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #53d9e2;
+}
+
+.label {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 5px;
+  text-transform: uppercase;
+  color: white;
+}
