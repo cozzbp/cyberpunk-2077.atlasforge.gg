@@ -1,4 +1,4 @@
-name = "cyberpunk-reverse-proxy"
+name = "cyberpunk-2077-reverse-proxy"
 main = "src/worker.js"
 compatibility_date = "2024-01-22"
 workers_dev = true
