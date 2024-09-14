@@ -26,7 +26,7 @@ export default function CyberpunkHome() {
         <img src={`${ASSET_PREFIX}/images/phantom_liberty_logo.webp`} className={styles.headerImg} loading='lazy' alt='CYBERPUNK 2077: PHANTOM LIBERTY' />
         <div className={styles.center}>
           <div className={styles.mapPreview}>
-            <a href={'./map'}>
+            <a href={`${LINK_PREFIX}/map`}>
               <img src={`${ASSET_PREFIX}/images/map.webp`} />
 
               <div>

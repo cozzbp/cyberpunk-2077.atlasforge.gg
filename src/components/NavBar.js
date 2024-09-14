@@ -235,7 +235,7 @@ const NavBar = ({ children, style, currentgame }) => {
           <Link href={`/`}><h1 className={`${styles.headerLogo} ${glitch.glitch} ${glitch.layers}`} data-text={'ATLASFORGE.GG'}>ATLASFORGE.GG</h1></Link>
 
           <div className={styles.navLinks} data-open={menuOpen}>
-            <Link onClick={() => setMenuOpen(false)} className={styles.styledLink} href={`/map`}>MAP</Link>
+            <Link onClick={() => setMenuOpen(false)} className={styles.styledLink} href={`${LINK_PREFIX}/map`}>MAP</Link>
             <div></div>
 
           </div>
