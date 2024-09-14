@@ -281,6 +281,12 @@ export default function Map() {
   var popupLabel = new maplibregl.Popup({ offset: 25, closeButton: false })
   var popupClick = new maplibregl.Popup({ offset: 25, closeButton: false })
 
+  const getMarkerLocation = (marker) => {
+
+    let coords = new maplibregl.MercatorCoordinate(0.5 + modelAsMercatorCoordinate.meterInMercatorCoordinateUnits() * marker.position.x, 0.5 - modelAsMercatorCoordinate.meterInMercatorCoordinateUnits() * marker.position.y, 0);
+    return {lngLat: coords?.toLngLat(), elevation: _.clamp(marker?.position?.z ?? 0 + 0, 0, Infinity) }
+  }
+
   const getMarkerLngLat = (marker) => {
 
     let coords = new maplibregl.MercatorCoordinate(0.5 + modelAsMercatorCoordinate.meterInMercatorCoordinateUnits() * marker.position.x, 0.5 - modelAsMercatorCoordinate.meterInMercatorCoordinateUnits() * marker.position.y, 0);
@@ -419,7 +425,7 @@ export default function Map() {
           properties: {
             name: subdistrictname,
             color: subdistrict?.color ?? '#33C9EB',
-            geometry: subdistrict.geometry
+            geometry: subdistrict.geometry,
           },
           geometry: {
             type: 'Polygon',
@@ -721,7 +727,7 @@ export default function Map() {
         Object.keys(mapmarkers).forEach(type => {
           mapmarkers[type].forEach((marker, index) => {
 
-            const lngLat = getMarkerLngLat(marker)
+            const {lngLat, elevation} = getMarkerLocation(marker)
             const key = marker.id
             const filtertext = JSON.stringify(_.pick(marker, filterProperties)).toLowerCase()
             //console.log('id', marker.id)
@@ -736,6 +742,7 @@ export default function Map() {
                 district: marker.district ?? 'Badlands',
                 subdistrict: marker.subdistrict,
                 filtertext: filtertext,
+                elevation,
               },
               geometry: {
                 type: 'Point',
@@ -767,6 +774,7 @@ export default function Map() {
           'type': 'symbol',
           'source': 'mapmarkers',
           'layout': {
+            'symbol-elevation': ['get', 'elevation'],
             'icon-image': ['get', 'type'],
             "icon-size": ['match', ['get', 'key'], 0, 0.65, 0.5],
             'icon-ignore-placement': true,
@@ -866,7 +874,7 @@ export default function Map() {
             ReactDOM.createRoot(popupLabelNode).render(
               <PopupLabel marker={marker} />,
             )
-            popupLabel.setLngLat(coordinates).setDOMContent(popupLabelNode).addTo(map.current)
+            popupLabel.setLngLat(coordinates, features[0].properties.elevation).setDOMContent(popupLabelNode).addTo(map.current)
             popupLabel.key = key
           }
         });
@@ -891,7 +899,7 @@ export default function Map() {
           ReactDOM.createRoot(popupNode).render(
             <Popup marker={marker} onSaveMarker={(marker) => { popupClick?.remove(); onSaveMarker(marker) }} onSetFound={(newSetFound) => onSetFound(marker, newSetFound)} found={foundMarkers?.[marker?.id] === true} onCancel={() => { popupClick?.remove() }} edit={false} types={Object.keys(mapmarkers)} />,
           )
-          popupClick.setLngLat(coordinates).setDOMContent(popupNode).addTo(map.current)
+          popupClick.setLngLat(coordinates, e?.features?.[0]?.properties?.elevation).setDOMContent(popupNode).addTo(map.current)
         })
 
 

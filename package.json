@@ -45,5 +45,10 @@
     "styled-components": "^6.0.8",
     "styled-icons": "^10.47.0",
     "three": "^0.156.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "maplibre-gl@3.6.2": "patches/maplibre-gl@3.6.2.patch"
+    }
   }
 }
