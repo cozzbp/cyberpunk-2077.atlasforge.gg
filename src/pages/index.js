@@ -9,7 +9,7 @@ import styles from './page.module.css'
 import toast from 'react-hot-toast';
 import * as _ from 'lodash'
 
-import { ASSET_PREFIX } from '@/asset_prefix'
+import { ASSET_PREFIX, LINK_PREFIX } from '@/asset_prefix'
 
 export default function CyberpunkHome() {
 
