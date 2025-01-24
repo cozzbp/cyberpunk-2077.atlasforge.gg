@@ -15,8 +15,6 @@ export default function App({ Component, pageProps }) {
   //const gameKey = 
   return (
     <>
-      <Script id="hydro_config" type="text/javascript">{`window.Hydro_tagId = "e0c7acd3-39f2-4330-8287-1048d8c1bdab";`}</Script>
-      <Script id="hydro_script" type="text/javascript" src="https://track.hydro.online/" />
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-2ZVJ5ERL6B" />
       <Script id="google-analytics">
         {`
